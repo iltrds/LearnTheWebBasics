@@ -4,12 +4,12 @@ const jokeText = document.getElementById("jokeText"); // add id
 
 function apiCall() { 
 
-    jokeText.textContent = "Fetching a joke...";
+    jokeText.textContent = "Fetching an idea...";
 
     /*Step 19: Create account with api-ninjas (https://api-ninjas.com/) */
     /*Step 20: Get API url and API Key */
 
-    fetch("https://api.api-ninjas.com/v1/jokes?limit=1", { // add event request url
+    fetch("https://api.api-ninjas.com/v1/bucketlist", { // add event request url
         headers: { 'X-Api-Key': 'oYwSM5KwWbsCBCijGdfzMQ==VMcmhocg41cGsWlJ' } // add api key
     })
         // Checks the network response 
@@ -22,14 +22,14 @@ function apiCall() {
         .then(function(data) {
 
             // Update the HTML tag with the joke fetched from the response
-            jokeText.textContent = data[0].joke;
+            jokeText.textContent = data.item;
 
         })
 
         // Handles any errors that occur during the fetch operation
         .catch(function(error) {
             console.error("Error fetching joke:", error);
-            jokeText.textContent = "An error occurred while fetching the joke.";
+            jokeText.textContent = "An error occurred while fetching the joke: "+ error;
         });
 };
 

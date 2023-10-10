@@ -5,23 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="challengestyles.css">
 
 
 </head>
-<body>
+<body class="challengeBackground">
 
     <nav class="navbar">
-        <a href="/index.html" class="nav-link">Joke API</a>
+        <a href="/index.html" class="nav-link">Bucket List API</a>
         <a href="challenge.html" class="nav-link">Challenge</a>
     </nav>
 
-    <div class="centered-content">
+    <h1 class="scrabbleTitle">SCRABBLE CHECK</h1>
+    <h1 class="scrabbleSubtitle">Check if your word is a real word!</h1>
 
-        <h1 class="title">Its your Turn!</h1>
-        <h1 class="title">Create your own API call and present the data on this page in a artistic way</h1>
+    <div class="container">
+
+        <h1 class="title">Insert Word Here</h1>
+
+        <input id="inputText" />
+
+        <button id="checkBtn">Check!</button>
+
+
 
     </div>
+
+    <div class="information">
+
+        <h1 id="realWord">Only common nouns!</h1>
+        <h1 id="swagalicious" class="definition"></h1>
+        
+    </div>
     
+
+
+    <script src="challenge.js"></script>
 </body>
 </html>
